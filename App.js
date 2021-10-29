@@ -6,11 +6,16 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Den første linje af Grøns nye psykologi app</Text>
+
       <StatusBar style="auto" />
     </View>
   );
 }
-
+class Board extends React.Component {
+  renderSquare(i) {
+    return <Square value={i} />;
+  }
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
